@@ -1,0 +1,15 @@
+@if (posts.isLoading()) {
+  <p>Завантаження…</p>
+} @else if (posts.error()) {
+  <p>Не вдалося завантажити пости.</p>
+} @else {
+  @for (post of posts.value(); track post.id) {
+    <article>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.content }}</p>
+      <small>{{ post.author }} — {{ post.createdAt | date: 'dd.MM.yyyy' }}</small>
+    </article>
+  } @empty {
+    <p>Постів поки немає.</p>
+  }
+}
