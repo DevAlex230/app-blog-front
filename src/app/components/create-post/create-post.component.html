@@ -1,0 +1,25 @@
+
+<h2 mat-dialog-title>Створити статтю</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="create-form">
+    <mat-form-field>
+      <mat-label>Заголовок статті</mat-label>
+      <input matInput [formField]="createForm.title">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field >
+      <mat-label>Текст статті</mat-label>
+      <input matInput [formField]="createForm.content">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Автор статті</mat-label>
+      <input matInput [formField]="createForm.author">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button matButton mat-dialog-close>Закрити</button>
+  <button matButton="filled" [mat-dialog-close]="true" (click)="createPost()">Створити</button>
+</mat-dialog-actions>

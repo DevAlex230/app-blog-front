@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: 'main',
     loadComponent: () =>
-      import('@app/main/main.component').then((m) => m.MainComponent),
+      import('@components/main/main.component').then((m) => m.MainComponent),
     children: [
       {
         path: '',
@@ -19,7 +19,9 @@ export const routes: Routes = [
       {
         path: 'posts',
         loadComponent: () =>
-          import('@app/posts/posts.component').then((m) => m.PostsComponent),
+          import('@components/posts/posts.component').then(
+            (m) => m.PostsComponent,
+          ),
       },
     ],
   },

@@ -2,11 +2,6 @@ import { HttpInterceptorFn } from '@angular/common/http';
 
 import { environment } from '@environments/environment';
 
-/**
- * Підставляє спільні заголовки в кожен запит до нашого API.
- * Аналог defaultHeaders з HttpService на проєкті front, але на функціональному
- * інтерсепторі — старий HTTP_INTERCEPTORS у standalone-застосунку не потрібен.
- */
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
   // Сторонні домени не чіпаємо, щоб не світити свої заголовки назовні.
   if (!req.url.startsWith(environment.apiUrl)) {
