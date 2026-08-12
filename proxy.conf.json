@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://nest-api-production-5b2a.up.railway.app",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" }
+  }
+}
