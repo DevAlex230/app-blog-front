@@ -7,7 +7,12 @@
       <input matInput [formField]="createForm.title">
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     </mat-form-field>
-    <mat-form-field >
+    <mat-form-field>
+      <mat-label>КОротний опис статті</mat-label>
+      <input matInput [formField]="createForm.excerpt">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
       <mat-label>Текст статті</mat-label>
       <input matInput [formField]="createForm.content">
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>

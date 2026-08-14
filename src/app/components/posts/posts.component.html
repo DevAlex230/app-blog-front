@@ -4,9 +4,9 @@
   <p>Не вдалося завантажити пости.</p>
 } @else {
   @for (post of posts.value(); track post.id) {
-    <article>
+    <article (click)="routeToPostDetail(post.id)">
       <h2>{{ post.title }}</h2>
-      <p>{{ post.content }}</p>
+      <p>{{ post.excerpt }}</p>
       <small>{{ post.author }} — {{ post.createdAt | date: 'dd.MM.yyyy' }}</small>
     </article>
   } @empty {

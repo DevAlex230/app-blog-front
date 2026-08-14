@@ -24,6 +24,7 @@ export class CreatePostComponent implements OnDestroy {
   postCreateModel = signal<CreatePost>({
     title:'',
     content: '',
+    excerpt: '',
     author: ''
   })
 

@@ -23,6 +23,13 @@ export const routes: Routes = [
             (m) => m.PostsComponent,
           ),
       },
+      {
+        path: 'posts/:id',
+        loadComponent: () =>
+          import('@components/post-detail/post-detail.component').then(
+            (m) => m.PostDetailComponent,
+          ),
+      },
     ],
   },
   {
