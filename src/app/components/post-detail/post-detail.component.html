@@ -1,0 +1,15 @@
+<a class="back" routerLink="/main/posts">← До списку</a>
+
+@if (post.isLoading()) {
+  <p>Завантаження…</p>
+} @else if (post.error()) {
+  <p>Не вдалося завантажити статтю.</p>
+} @else if (post.value(); as article) {
+  <article>
+    <h1>{{ article.title }}</h1>
+    <small>{{ article.author }} — {{ article.createdAt | date: 'dd.MM.yyyy' }}</small>
+    <p>{{ article.content }}</p>
+  </article>
+} @else {
+  <p>Статтю не знайдено.</p>
+}
