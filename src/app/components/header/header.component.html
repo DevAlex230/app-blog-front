@@ -1,0 +1,23 @@
+<header class="header">
+  <h1 class="header--title">
+    <a class="header__brand" routerLink="/main">
+      Fly fishing blog of Ukraine
+    </a>
+  </h1>
+
+  <search class="header--search">
+    <form class="search-form" novalidate (submit)="onSearch($event)">
+      <mat-form-field>
+        <mat-label>Пошук</mat-label>
+        <input matInput [formField]="searchForm.title">
+        @if (searchForm.title().value()) {
+          <button matIconButton matSuffix type="button" (click)="clearForm()" class="button-form">
+            <mat-icon>close</mat-icon>
+          </button>
+        } @else {
+          <mat-icon matSuffix>search</mat-icon>
+        }
+      </mat-form-field>
+    </form>
+  </search>
+</header>
