@@ -4,10 +4,11 @@ import {MatButton} from '@angular/material/button';
 import {MatDialog} from '@angular/material/dialog';
 import {CreatePostComponent} from '@components/create-post/create-post.component';
 import {HeaderComponent} from '@components/header/header.component';
+import {FooterComponent} from '@components/footer/footer.component';
 
 @Component({
   selector: 'app-main',
-  imports: [RouterOutlet, MatButton, HeaderComponent],
+  imports: [RouterOutlet, MatButton, HeaderComponent, FooterComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })

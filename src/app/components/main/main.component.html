@@ -1,3 +1,11 @@
-<app-header />
-<router-outlet />
-<button matButton="filled" (click)="openDialog()">Створити статтю</button>
+<div class="app-root">
+  <app-header />
+  <div class="main-root">
+    <div class="main-content">
+      <router-outlet />
+      <button matButton="filled" (click)="openDialog()">Створити статтю</button>
+    </div>
+  </div>
+  <app-footer />
+</div>
+
