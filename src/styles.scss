@@ -10,7 +10,13 @@ html {
         primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
       ),
-      typography: Roboto,
+      typography: (
+        plain-family: Inter,
+        brand-family: Inter,
+        regular-weight: 400,
+        medium-weight: 500,
+        bold-weight: 600,
+      ),
       density: 0,
     )
   );
