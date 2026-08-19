@@ -28,11 +28,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/img",
+                "output": "assets/img"
               }
             ],
             "styles": ["src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/app/assets/scss", "src"]
+              "includePaths": ["src/assets/scss", "src"]
             },
             "security": {
               "allowedHosts": []

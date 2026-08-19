@@ -1,13 +1,14 @@
 import { Component, inject, signal} from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import {MatFormField, MatInput, MatLabel, MatSuffix} from '@angular/material/input';
-import {MatIcon} from '@angular/material/icon';
-import {form, FormField} from '@angular/forms/signals';
-import {MatIconButton} from '@angular/material/button';
+import { Router, RouterLink} from '@angular/router';
+import {form } from '@angular/forms/signals';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, MatFormField, MatIcon, MatInput, MatLabel, MatSuffix, FormField, MatIconButton],
+  imports: [
+    RouterLink,
+    NgOptimizedImage
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

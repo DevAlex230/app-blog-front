@@ -1,23 +1,27 @@
 <header class="header">
-  <h1 class="header--title">
-    <a class="header__brand" routerLink="/main">
-      Fly fishing blog of Ukraine
-    </a>
-  </h1>
+  <a class="logo" [routerLink]="'/main'">
+    <img ngSrc="/assets/img/logo.svg" alt="Blog" width="100" height="21" [priority]="true">
+  </a>
+  <nav class="navigation">
+    <ul class="navigation--list">
+      <li class="navigation--list-item">Blog</li>
+      <li class="navigation--list-item">flyes</li>
+    </ul>
+  </nav>
 
-  <search class="header--search">
-    <form class="search-form" novalidate (submit)="onSearch($event)">
-      <mat-form-field>
-        <mat-label>Пошук</mat-label>
-        <input matInput [formField]="searchForm.title">
-        @if (searchForm.title().value()) {
-          <button matIconButton matSuffix type="button" (click)="clearForm()" class="button-form">
-            <mat-icon>close</mat-icon>
-          </button>
-        } @else {
-          <mat-icon matSuffix>search</mat-icon>
-        }
-      </mat-form-field>
-    </form>
-  </search>
+<!--  <search class="header&#45;&#45;search">-->
+<!--    <form class="search-form" novalidate (submit)="onSearch($event)">-->
+<!--      <mat-form-field>-->
+<!--        <mat-label>Пошук</mat-label>-->
+<!--        <input matInput [formField]="searchForm.title">-->
+<!--        @if (searchForm.title().value()) {-->
+<!--          <button matIconButton matSuffix type="button" (click)="clearForm()" class="button-form">-->
+<!--            <mat-icon>close</mat-icon>-->
+<!--          </button>-->
+<!--        } @else {-->
+<!--          <mat-icon matSuffix>search</mat-icon>-->
+<!--        }-->
+<!--      </mat-form-field>-->
+<!--    </form>-->
+<!--  </search>-->
 </header>
