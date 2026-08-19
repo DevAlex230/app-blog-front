@@ -1,0 +1,31 @@
+:host{
+  position: sticky;
+  top: 16px;
+}
+
+.header {
+  height: 54px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+  0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  background: white;
+  display: flex;
+  gap: 32px;
+  padding-inline: 16px;
+  .logo{
+    align-content: center;
+    img{
+      display: block;
+      vertical-align: center;
+    }
+  }
+}
+.navigation{
+  &--list{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
