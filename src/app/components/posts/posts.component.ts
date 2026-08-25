@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgOptimizedImage} from '@angular/common';
 import { HttpResourceRef } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
@@ -7,7 +7,7 @@ import { PostService } from '@services/post.service';
 
 @Component({
   selector: 'app-posts',
-  imports: [DatePipe],
+  imports: [DatePipe, NgOptimizedImage],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss',
 })

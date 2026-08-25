@@ -5,8 +5,18 @@
   &--item{
     background: white;
     border-radius: 8px;
-    padding: 16px;
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
     min-height: 500px;
+  }
+  .img{
+    position: relative;
+    height: 250px;
+    img{
+      display: block;
+      object-fit: cover;
+    }
+  }
+  .caption{
+    padding: 16px;
   }
 }
