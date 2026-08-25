@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgOptimizedImage} from '@angular/common';
 import { HttpResourceRef } from '@angular/common/http';
 import { Component, inject, input, numberAttribute } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -8,7 +8,7 @@ import { PostService } from '@services/post.service';
 
 @Component({
   selector: 'app-post-detail',
-  imports: [DatePipe, RouterLink],
+  imports: [DatePipe, RouterLink, NgOptimizedImage],
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.scss',
 })

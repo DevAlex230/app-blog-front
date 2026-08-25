@@ -25,7 +25,9 @@ export class CreatePostComponent implements OnDestroy {
     title:'',
     content: '',
     excerpt: '',
-    author: ''
+    author: '',
+    preview_img: '',
+    main_img: ''
   })
 
   createForm = form(this.postCreateModel);

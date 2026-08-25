@@ -7,6 +7,8 @@ export interface Post {
   excerpt?: string;
   author: string;
   createdAt: string;
+  preview_img: string;
+  main_img: string;
 }
 
 export interface CreatePost {
@@ -15,4 +17,6 @@ export interface CreatePost {
   content: string;
   excerpt: string;
   author: string;
+  preview_img: string,
+  main_img: string;
 }

@@ -5,11 +5,20 @@
 } @else {
   <div class="post-grid">
     @for (post of posts.value(); track post.id) {
-      <article (click)="routeToPostDetail(post.id)" class="post-grid--item">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.excerpt }}</p>
-        <small>{{ post.author }} — {{ post.createdAt | date: 'dd.MM.yyyy' }}</small>
-      </article>
+      <figure (click)="routeToPostDetail(post.id)" class="post-grid--item">
+        <div class="img">
+          @if (post.preview_img) {
+            <img [ngSrc]="post.preview_img" alt="" [fill]="true">
+          } @else {
+            <img [ngSrc]="'assets/img/placeholder.svg'" alt="" [fill]="true">
+          }
+        </div>
+        <figcaption class="caption">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.excerpt }}</p>
+          <small>{{ post.author }} — {{ post.createdAt | date: 'dd.MM.yyyy' }}</small>
+        </figcaption>
+      </figure>
     } @empty {
       <p>Постів поки немає.</p>
     }

@@ -6,6 +6,11 @@
   <p>Не вдалося завантажити статтю.</p>
 } @else if (post.value(); as article) {
   <article>
+    <div class="img">
+      @if (article.main_img) {
+        <img [ngSrc]="article.main_img" alt="" [fill]="true">
+      }
+    </div>
     <h1>{{ article.title }}</h1>
     <small>{{ article.author }} — {{ article.createdAt | date: 'dd.MM.yyyy' }}</small>
     <p>{{ article.content }}</p>

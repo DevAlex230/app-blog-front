@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" role="img" aria-label="Плейсхолдер: нахлист">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAEFED"/>
+      <stop offset="1" stop-color="#D8E2DF"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C2D0CE"/>
+      <stop offset="1" stop-color="#A9BCBA"/>
+    </linearGradient>
+    <clipPath id="waterClip"><rect x="0" y="400" width="900" height="200"/></clipPath>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#sky)"/>
+  <rect y="400" width="900" height="200" fill="url(#water)"/>
+
+  <!-- далекий берег -->
+  <g fill="#9FB2AD" opacity="0.55">
+    <path d="M0 400 C 90 372 150 386 220 374 C 300 360 360 380 440 372 C 540 362 620 384 700 376 C 790 367 850 388 900 380 L900 400 Z"/>
+  </g>
+  <g fill="#8CA29C" opacity="0.35">
+    <path d="M540 400 C 600 384 640 392 700 386 C 780 378 840 394 900 390 L900 400 Z"/>
+  </g>
+
+  <!-- вода: течія -->
+  <g stroke="#8FA5A3" stroke-width="2" stroke-linecap="round" opacity="0.5" fill="none">
+    <path d="M60 432 h120"/><path d="M700 424 h140"/>
+    <path d="M120 486 h180"/><path d="M620 500 h190"/>
+    <path d="M320 540 h150"/><path d="M40 560 h110"/>
+  </g>
+
+  <!-- кола на воді -->
+  <g stroke="#7E9694" fill="none" opacity="0.55">
+    <ellipse cx="565" cy="474" rx="52" ry="9" stroke-width="2"/>
+    <ellipse cx="565" cy="474" rx="86" ry="15" stroke-width="1.5" opacity="0.6"/>
+    <ellipse cx="565" cy="474" rx="122" ry="21" stroke-width="1" opacity="0.35"/>
+  </g>
+
+  <!-- відображення рибалки -->
+  <g clip-path="url(#waterClip)" opacity="0.22">
+    <g transform="translate(0,800) scale(1,-1)" fill="none" stroke="#33413F" stroke-width="7"
+       stroke-linecap="round" stroke-dasharray="9 11">
+      <circle cx="310" cy="318" r="11" fill="#33413F" stroke="none"/>
+      <path d="M310 330 L307 400"/>
+      <path d="M318 342 L352 312"/>
+    </g>
+  </g>
+
+  <!-- рибалка -->
+  <g stroke="#33413F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="310" cy="318" r="11" fill="#33413F"/>
+    <path d="M310 331 L306 396" stroke-width="9"/>
+    <path d="M306 396 L296 414" stroke-width="8"/>
+    <path d="M306 396 L318 414" stroke-width="8"/>
+    <path d="M304 344 L292 382" stroke-width="6"/>
+    <path d="M316 342 L352 312" stroke-width="6"/>
+    <!-- вудка -->
+    <path d="M352 312 Q 396 262 430 215" stroke-width="3.5"/>
+  </g>
+
+  <!-- шнур: класична петля -->
+  <g fill="none" stroke="#33413F" stroke-linecap="round">
+    <path d="M430 215 C 520 140 660 128 740 180 C 776 204 756 241 714 233 C 650 221 570 215 505 233" stroke-width="3.2"/>
+    <path d="M505 233 L478 241" stroke-width="1.4"/>
+    <circle cx="474" cy="242" r="3.6" fill="#B08D57" stroke="none"/>
+  </g>
+
+  <!-- очерет -->
+  <g fill="none" stroke="#7E9083" stroke-width="2.5" stroke-linecap="round" opacity="0.75">
+    <path d="M42 600 C 46 552 40 524 28 498"/>
+    <path d="M70 600 C 72 548 84 522 100 502"/>
+    <path d="M96 600 C 94 560 86 534 76 514"/>
+    <path d="M846 600 C 844 556 852 530 866 508"/>
+    <path d="M874 600 C 876 558 870 534 858 516"/>
+  </g>
+
+  <!-- рамка плейсхолдера -->
+  <g stroke="#33413F" stroke-width="1.5" opacity="0.28" fill="none">
+    <path d="M24 60 L24 24 L60 24"/>
+    <path d="M840 24 L876 24 L876 60"/>
+    <path d="M876 540 L876 576 L840 576"/>
+    <path d="M60 576 L24 576 L24 540"/>
+  </g>
+</svg>
