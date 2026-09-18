@@ -20,3 +20,9 @@ export interface CreatePost {
   preview_img: string,
   main_img: string;
 }
+
+export interface PostCategory {
+  id: number;
+  name: string;
+  slug: string;
+}
