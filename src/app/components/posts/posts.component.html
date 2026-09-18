@@ -3,6 +3,12 @@
 } @else if (posts.error()) {
   <p>Не вдалося завантажити пости.</p>
 } @else {
+  <mat-chip-set class="chips-category">
+    @for (category of categories.value(); track category.id) {
+      <mat-chip (click)="selectPostCategory(category.slug)">{{category.name}}</mat-chip>
+    }
+  </mat-chip-set>
+
   <div class="post-grid">
     @for (post of posts.value(); track post.id) {
       <figure (click)="routeToPostDetail(post.id)" class="post-grid--item">
